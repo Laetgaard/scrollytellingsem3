@@ -17,51 +17,48 @@ video{
     width:100%;
     height:100vh;
     object-fit:cover;
-    z-index:1;
+    z-index:0;
 }
 
 /* OVERLAYS */
-
-.overlay{
-    position:absolute;
-    opacity:0;
-    transition:0.6s ease;
-    color:white;
-    z-index:2;
+.overlay {
+    position: fixed; /* Fixed sikrer at de bliver på skærmen mens videoen scroller */
+    top: 40%;
+    left: 8%;
+    display: none; /* Skjult som standard */
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+    max-width: 500px;
 }
 
-/* CENTER TITLE */
-
-.center{
-    top:40%;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
-    font-family:'Bebas Neue', sans-serif;
-    font-size:80px;
+/* Vis klassen - uden transition for at fjerne fade */
+.overlay.show {
+    display: block;
 }
 
-/* LEFT CONTENT */
-
-.left{
-    top:40%;
-    left:8%;
-    max-width:500px;
+/* CENTER TITLE (Hvis du stadig vil bruge den, ellers brug .left) */
+.center {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
 }
 
-/* IMAGE */
-
-.left img{
-    width:300px;
-    margin-top:20px;
+/* Billede styling */
+.left img {
+    width: 300px;
+    margin-top: 20px;
 }
 
-/* IMAGE SLIDE */
+/* Slide billedet i sektion 3 - fjern transition her også hvis det skal være instant */
+.slideImg {
+    display: none;
+}
 
-.slideImg{
-    transform:translateX(-120px);
-    opacity:0;
-    transition:1s ease;
+.slideImg.slide {
+    display: block;
 }
 
 .slide{
