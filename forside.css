@@ -26,7 +26,6 @@ video{
     top: 40%;
     left: 8%;
     display: none; /* Skjult som standard */
-    color: white;
     z-index: 10;
     pointer-events: none;
     max-width: 500px;
@@ -44,6 +43,7 @@ video{
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 80px;
+    color: #79840F;
 }
 
 /* Billede styling */
@@ -70,4 +70,22 @@ video{
 
 .show{
     opacity:1;
+}
+
+h1{
+    font-size: 80px;
+    color: #79840F;
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #79840F;
+}
+
+p{
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #733119;
+    font-weight: bold;
 }
