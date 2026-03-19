@@ -84,8 +84,29 @@ h2{
 }
 
 p{
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Arial', sans-serif;
     color: #733119;
     font-weight: bold;
+}
+
+#scroll-hint {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    z-index: 100;
+    pointer-events: none;
+    /* En lille animation så man ser den */
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+    40% {transform: translateX(-50%) translateY(-10px);}
+    60% {transform: translateX(-50%) translateY(-5px);}
 }
